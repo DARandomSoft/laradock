@@ -211,6 +211,7 @@ services:
 
 ### PHP-FPM ##############################################
     php-fpm:
+      user: "${PHP_FPM_PUID}:${PHP_FPM_PGID}"
       build:
         context: ./php-fpm
         args:
